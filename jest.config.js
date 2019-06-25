@@ -23,6 +23,7 @@ module.exports = {
       statements: 100
     }
   },
+  testPathIgnorePatterns: ["/node_modules/", "/tmp/"],
   snapshotResolver: "<rootDir>/snapshots",
   moduleNameMapper: {
     "^onno$": "<rootDir>/packages/onno/src"
