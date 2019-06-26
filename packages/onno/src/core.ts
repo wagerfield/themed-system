@@ -11,8 +11,11 @@ export const registry: Registry = {}
 export const renderers: Renderers = {}
 
 export function register(config: RegistryConfig | RegistryConfig[]) {
-  if (isArray(config)) config.forEach(register)
-  else Object.assign(registry, config)
+  if (isArray(config)) {
+    config.forEach(register)
+  } else {
+    Object.assign(registry, config)
+  }
 }
 
 export function parse(value: RegistryConfigValue) {

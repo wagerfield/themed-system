@@ -16,7 +16,8 @@ export const color = extend({
   }
 })
 
-export const layout = extend({
+export const size = extend({
+  themeKeys: "sizes",
   transform: addPcOrPx,
   defaults: PC_SCALE
 })

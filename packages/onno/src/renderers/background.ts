@@ -1,6 +1,6 @@
 import * as C from "csstype"
 import * as T from "../types"
-import { color, layout } from "./configs"
+import { color, size } from "./configs"
 
 interface BackgroundConfig {
   background: [C.BackgroundProperty<T.Length>, "bg"]
@@ -17,7 +17,7 @@ export const backgroundConfig: T.RegistryConfig<BackgroundConfig> = {
   background: color("bg"),
   backgroundColor: color("bgc"),
   backgroundImage: "bgi",
-  backgroundPosition: layout("bgp"),
+  backgroundPosition: size("bgp"),
   backgroundRepeat: "bgr",
-  backgroundSize: layout("bgs")
+  backgroundSize: size("bgs")
 }
