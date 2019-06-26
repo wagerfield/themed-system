@@ -2,22 +2,22 @@
 
 Composed `render` functions follow the naming convention of ending in `Set` and appear in **bold** within the tables.
 
-- [Animation](#animation)
-- [Background](#background)
-- [Border](#border)
-- [Color](#color)
-- [Display](#display)
-- [Flex](#flex)
-- [Grid](#grid)
-- [Layout](#layout)
-- [Outline](#outline)
-- [Shadow](#shadow)
-- [Space](#space)
-- [Text](#text)
-- [Transform](#transform)
-- [Global](#global)
-- [Variants](#variants)
-  - [globalStyle](#globalstyle)
+- [Animation](#Animation)
+- [Background](#Background)
+- [Border](#Border)
+- [Color](#Color)
+- [Display](#Display)
+- [Flex](#Flex)
+- [Grid](#Grid)
+- [Layout](#Layout)
+- [Outline](#Outline)
+- [Shadow](#Shadow)
+- [Space](#Space)
+- [Text](#Text)
+- [Transform](#Transform)
+- [Global](#Global)
+- [Variants](#Variants)
+  - [globalStyle](#globalStyle)
 
 ## Animation
 
@@ -84,18 +84,18 @@ Composed `render` functions follow the naming convention of ending in `Set` and 
 | :---------------- | :--------------------------- | :------------- | :--------- | :-------- |
 | **flexParentSet** | _all flex parent keys below_ |
 | display           | display, d                   | display        | none       | none      |
-| flexFlow          | flexFlow, fxf                | flexFlow       | none       | none      |
-| flexDirection     | flexDirection, fxd           | flexDirection  | none       | none      |
-| flexWrap          | flexWrap, fxw                | flexWrap       | none       | none      |
+| flexFlow          | flexFlow, flf                | flexFlow       | none       | none      |
+| flexDirection     | flexDirection, fld           | flexDirection  | none       | none      |
+| flexWrap          | flexWrap, flw                | flexWrap       | none       | none      |
 | alignItems        | alignItems, ali              | alignItems     | none       | none      |
 | alignContent      | alignContent, alc            | alignContent   | none       | none      |
 | justifyItems      | justifyItems, jfi            | justifyItems   | none       | none      |
 | justifyContent    | justifyContent, jfc          | justifyContent | none       | none      |
 | **flexChildSet**  | _all flex child keys below_  |
-| flex              | flex, fx                     | flex           | none       | none      |
-| flexBasis         | flexBasis, fxb               | flexBasis      | none       | none      |
-| flexGrow          | flexGrow, fxg                | flexGrow       | none       | none      |
-| flexShrink        | flexShrink, fxs              | flexShrink     | none       | none      |
+| flex              | flex, fl                     | flex           | none       | none      |
+| flexBasis         | flexBasis, flb               | flexBasis      | none       | none      |
+| flexGrow          | flexGrow, flg                | flexGrow       | none       | none      |
+| flexShrink        | flexShrink, fls              | flexShrink     | none       | none      |
 | alignSelf         | alignSelf, als               | alignSelf      | none       | none      |
 | justifySelf       | justifySelf, jfs             | justifySelf    | none       | none      |
 | order             | order, ord                   | order          | none       | none      |

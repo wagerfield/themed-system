@@ -451,7 +451,7 @@ A number of naming conventions have been introduced by onno to help enforce cons
    - `border` prop aliases _start_ with `bd`
    - `outline` prop aliases _start_ with `ol`
    - `overflow` prop aliases _start_ with `of`
-   - `flex` prop aliases _start_ with `fx`
+   - `flex` prop aliases _start_ with `fl`
    - `grid` prop aliases _start_ with `g`
    - `place` prop aliases _start_ with `pl`
    - `align` prop aliases _start_ with `al`
