@@ -12,8 +12,10 @@ import { borderConfig } from "./renderers/border"
 import { displayConfig } from "./renderers/display"
 import { flexParentConfig, flexChildConfig } from "./renderers/flex"
 import { gridParentConfig, gridChildConfig } from "./renderers/grid"
+import { outlineConfig } from "./renderers/outline"
 import { overflowConfig } from "./renderers/overflow"
 import { positionConfig } from "./renderers/position"
+import { shadowConfig } from "./renderers/shadow"
 import { sizeConfig } from "./renderers/size"
 
 register([
@@ -27,7 +29,9 @@ register([
   flexChildConfig,
   gridParentConfig,
   gridChildConfig,
+  outlineConfig,
   overflowConfig,
   positionConfig,
+  shadowConfig,
   sizeConfig
 ])
