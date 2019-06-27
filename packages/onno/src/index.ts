@@ -15,13 +15,14 @@ import {
   flexChildConfig,
   gridParentConfig,
   gridChildConfig,
+  marginConfig,
+  paddingConfig,
   outlineConfig,
   overflowConfig,
   positionConfig,
   shadowConfig,
   sizeConfig,
-  marginConfig,
-  paddingConfig
+  textConfig
 } from "./renderers"
 
 register([
@@ -35,11 +36,12 @@ register([
   flexChildConfig,
   gridParentConfig,
   gridChildConfig,
+  marginConfig,
+  paddingConfig,
   outlineConfig,
   overflowConfig,
   positionConfig,
   shadowConfig,
   sizeConfig,
-  marginConfig,
-  paddingConfig
+  textConfig
 ])
