@@ -20,8 +20,9 @@ import { OutlineConfig, OutlineProps } from "./outline"
 import { OverflowConfig, OverflowProps } from "./overflow"
 import { PositionConfig, PositionProps } from "./position"
 import { ShadowConfig, ShadowProps } from "./shadow"
+import { MarginConfig, MarginProps } from "./margin"
+import { PaddingConfig, PaddingProps } from "./padding"
 import { SizeConfig, SizeProps } from "./size"
-import { MarginConfig, MarginProps, PaddingConfig, PaddingProps } from "./space"
 import { TextConfig, TextProps } from "./text"
 import { TransformConfig, TransformProps } from "./transform"
 
@@ -39,9 +40,9 @@ export type RegistryConfigs = MiscConfig &
   OverflowConfig &
   PositionConfig &
   ShadowConfig &
-  SizeConfig &
   MarginConfig &
   PaddingConfig &
+  SizeConfig &
   TextConfig &
   TransformConfig
 
@@ -61,9 +62,9 @@ export type RendererProps = MiscProps &
   OverflowProps &
   PositionProps &
   ShadowProps &
-  SizeProps &
   MarginProps &
   PaddingProps &
+  SizeProps &
   TextProps &
   TransformProps
 
@@ -79,7 +80,8 @@ export * from "./outline"
 export * from "./overflow"
 export * from "./position"
 export * from "./shadow"
+export * from "./margin"
+export * from "./padding"
 export * from "./size"
-export * from "./space"
 export * from "./text"
 export * from "./transform"
