@@ -1,8 +1,8 @@
 # folders
+packages/*/types
 node_modules
 coverage
 reports
-types
 cjs
 esm
 lib
