@@ -5,7 +5,7 @@ import {
   RegistryConfigValue,
   RendererConfig
 } from "./types"
-import { isArray } from "./utils"
+import { assign, isArray } from "./utils"
 
 export const registry: Registry = {}
 export const renderers: Renderers = {}
@@ -14,7 +14,7 @@ export function register(config: RegistryConfig | RegistryConfig[]) {
   if (isArray(config)) {
     config.forEach(register)
   } else {
-    Object.assign(registry, config)
+    assign(registry, config)
   }
 }
 
@@ -23,4 +23,4 @@ export function parse(value: RegistryConfigValue) {
 }
 
 export const extend = (a: RegistryConfigValue) => (b: RegistryConfigValue) =>
-  Object.assign(parse(a), parse(b))
+  assign(parse(a), parse(b))
