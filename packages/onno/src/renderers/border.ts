@@ -3,7 +3,7 @@ import * as T from "../types"
 import { assign } from "../utils"
 import { border, color, edges, size } from "./configs"
 
-interface BorderConfig {
+export interface BorderConfig {
   border: [C.BorderProperty<T.Length>, "bd"]
   borderX: [C.BorderProperty<T.Length>, "bdx"]
   borderY: [C.BorderProperty<T.Length>, "bdy"]

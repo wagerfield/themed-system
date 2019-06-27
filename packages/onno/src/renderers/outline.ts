@@ -2,7 +2,7 @@ import * as C from "csstype"
 import * as T from "../types"
 import { border, color } from "./configs"
 
-interface OutlineConfig {
+export interface OutlineConfig {
   outline: [C.OutlineProperty<T.Length>, "ol"]
   outlineColor: [C.OutlineColorProperty, "olc"]
   outlineOffset: [C.OutlineOffsetProperty<T.Length>, "olo"]

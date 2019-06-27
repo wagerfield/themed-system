@@ -2,7 +2,7 @@ import * as C from "csstype"
 import * as T from "../types"
 import { size } from "./configs"
 
-interface PositionConfig {
+export interface PositionConfig {
   position: [C.PositionProperty, "pos"]
   zIndex: [C.ZIndexProperty, "zi"]
   top: [C.TopProperty<T.Length>, "t"]

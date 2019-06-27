@@ -1,7 +1,7 @@
 import * as C from "csstype"
 import * as T from "../types"
 
-interface TransformConfig {
+export interface TransformConfig {
   perspective: [C.PerspectiveProperty<T.Length>, "ps"]
   perspectiveOrigin: [C.PerspectiveOriginProperty<T.Length>, "pso"]
   transform: [C.TransformProperty, "tf"]

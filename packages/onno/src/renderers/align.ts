@@ -1,7 +1,7 @@
 import * as C from "csstype"
 import * as T from "../types"
 
-interface AlignConfig {
+export interface AlignConfig {
   // Align
   alignContent: [C.AlignContentProperty, "alc"]
   alignItems: [C.AlignItemsProperty, "ali"]

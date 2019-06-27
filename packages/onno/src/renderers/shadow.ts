@@ -1,7 +1,7 @@
 import * as C from "csstype"
 import * as T from "../types"
 
-interface ShadowConfig {
+export interface ShadowConfig {
   boxShadow: [C.BoxShadowProperty, "bsh"]
   textShadow: [C.TextShadowProperty, "tsh"]
 }

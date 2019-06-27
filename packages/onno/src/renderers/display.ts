@@ -1,7 +1,7 @@
 import * as C from "csstype"
 import * as T from "../types"
 
-interface DisplayConfig {
+export interface DisplayConfig {
   display: [C.DisplayProperty, "d"]
   opacity: [T.Primitive, "o"]
   visibility: [C.VisibilityProperty, "vis"]

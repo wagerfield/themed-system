@@ -10,7 +10,7 @@ type FontSmoothingValue =
   | "antialiased"
   | "subpixel-antialiased"
 
-interface TextConfig {
+export interface TextConfig {
   fontFamily: [C.FontFamilyProperty, "ff"]
   fontSize: [C.FontSizeProperty<T.Length>, "fs"]
   fontSmoothing: [FontSmoothingValue, "fsm"]

@@ -6,7 +6,7 @@ import { edges, space } from "./configs"
 
 type MarginProperty = C.MarginProperty<T.Length>
 
-interface MarginConfig {
+export interface MarginConfig {
   margin: [MarginProperty, "m"]
   marginX: [MarginProperty, "mx"]
   marginY: [MarginProperty, "my"]
@@ -24,7 +24,7 @@ export const marginConfig = edges("margin", "m", space)
 
 type PaddingProperty = C.PaddingProperty<T.Length>
 
-interface PaddingConfig {
+export interface PaddingConfig {
   padding: [PaddingProperty, "p"]
   paddingX: [PaddingProperty, "px"]
   paddingY: [PaddingProperty, "py"]

@@ -2,7 +2,7 @@ import * as C from "csstype"
 import * as T from "../types"
 import { size } from "./configs"
 
-interface SizeConfig {
+export interface SizeConfig {
   size: [C.WidthProperty<T.Length> & C.HeightProperty<T.Length>, "s"]
   width: [C.WidthProperty<T.Length>, "w"]
   minWidth: [C.MinWidthProperty<T.Length>, "minw"]

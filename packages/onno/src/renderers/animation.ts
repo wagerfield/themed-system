@@ -1,7 +1,7 @@
 import * as C from "csstype"
 import * as T from "../types"
 
-interface AnimationConfig {
+export interface AnimationConfig {
   animation: [C.AnimationProperty]
   transition: [C.TransitionProperty]
 }

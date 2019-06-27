@@ -3,7 +3,7 @@ import * as T from "../types"
 
 // Flex Parent
 
-interface FlexParentConfig {
+export interface FlexParentConfig {
   flexDirection: [C.FlexDirectionProperty, "fld"]
   flexFlow: [C.FlexFlowProperty, "flf"]
   flexWrap: [C.FlexWrapProperty, "flw"]
@@ -19,7 +19,7 @@ export const flexParentConfig: T.RegistryConfig<FlexParentConfig> = {
 
 // Flex Child
 
-interface FlexChildConfig {
+export interface FlexChildConfig {
   flex: [C.FlexProperty<T.Length>, "fl"]
   flexBasis: [C.FlexBasisProperty<T.Length>, "flb"]
   flexGrow: [C.Globals | number, "flg"]

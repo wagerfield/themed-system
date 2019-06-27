@@ -1,7 +1,7 @@
 import * as C from "csstype"
 import * as T from "../types"
 
-interface OverflowConfig {
+export interface OverflowConfig {
   overflow: [C.OverflowProperty, "of"]
   overflowX: [C.OverflowXProperty, "ofx"]
   overflowY: [C.OverflowYProperty, "ofy"]

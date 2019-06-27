@@ -4,7 +4,7 @@ import { space } from "./configs"
 
 // Grid Parent
 
-interface GridParentConfig {
+export interface GridParentConfig {
   grid: [C.GridProperty, "g"]
   gridAutoColumns: [C.GridAutoColumnsProperty<T.Length>, "gac"]
   gridAutoRows: [C.GridAutoRowsProperty<T.Length>, "gar"]
@@ -36,7 +36,7 @@ export const gridParentConfig: T.RegistryConfig<GridParentConfig> = {
 
 // Grid Child
 
-interface GridChildConfig {
+export interface GridChildConfig {
   gridArea: [C.GridAreaProperty, "ga"]
   gridColumn: [C.GridColumnProperty, "gc"]
   gridColumnStart: [C.GridColumnStartProperty, "gcs"]
