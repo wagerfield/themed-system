@@ -10,7 +10,7 @@ export const border = extend({
 
 export const color = extend({
   themeKeys: "colors",
-  defaults: {
+  lookup: {
     gray: ["#EEE", "#AAA", "#666"],
     text: "#222",
     link: "#00F"
@@ -20,13 +20,13 @@ export const color = extend({
 export const size = extend({
   themeKeys: "sizes",
   transform: addPcOrPx,
-  defaults: PC_SCALE
+  lookup: PC_SCALE
 })
 
 export const space = extend({
   themeKeys: "spaces",
   transform: addPx,
-  defaults: PX_SCALE
+  lookup: PX_SCALE
 })
 
 export const edges = (

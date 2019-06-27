@@ -8,7 +8,7 @@ export interface RendererConfig {
   styleKeys?: Key | Keys
   themeKeys?: Key | Keys
   transform?: Transform
-  defaults?: Lookup
+  lookup?: Lookup
   index?: Index
 }
 
