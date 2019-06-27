@@ -22,7 +22,8 @@ import {
   positionConfig,
   shadowConfig,
   sizeConfig,
-  textConfig
+  textConfig,
+  transformConfig
 } from "./renderers"
 
 register([
@@ -43,5 +44,6 @@ register([
   positionConfig,
   shadowConfig,
   sizeConfig,
-  textConfig
+  textConfig,
+  transformConfig
 ])
