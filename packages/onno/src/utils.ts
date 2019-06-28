@@ -12,7 +12,8 @@ export const isFunction = isType<Func>("function")
 
 export const isNumber = isType<number>("number")
 
-export const isObject = isType<object>("object")
+export const isObject = (value: any): value is object =>
+  !!value && typeof value === "object"
 
 export const isString = isType<string>("string")
 
