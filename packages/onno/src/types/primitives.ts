@@ -14,7 +14,7 @@ export type Func = (...args: any[]) => any
 
 export type Pred = (...args: any[]) => boolean
 
-export interface Alias<T> {
-  alias: Key
-  value: T
+export interface Alias<V, A extends Key = Key> {
+  alias: A
+  value: V
 }
