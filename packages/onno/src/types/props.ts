@@ -1,7 +1,8 @@
-import { UnionToIntersection } from "./helpers"
 import { Key, Primitive } from "./primitives"
+import { BreakpointKey } from "./breakpoints"
+import { UnionToIntersection } from "./helpers"
 
-export type ResponsiveValue<V> = V | V[] | { [key: string]: V }
+export type ResponsiveValue<V> = V | V[] | Partial<Record<BreakpointKey, V>>
 
 // Credit: Titian Cernicova-Dragomir
 // https://github.com/dragomirtitian
