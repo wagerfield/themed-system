@@ -7,6 +7,7 @@
   "rules": {
     "array-type": [true, "array"],
     "curly": [true, "ignore-same-line"],
+    "forin": false,
     "interface-name": [true, "never-prefix"],
     "object-literal-sort-keys": false,
     "ordered-imports": false,
