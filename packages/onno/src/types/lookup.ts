@@ -1,4 +1,4 @@
-import { Alias, Nil, Primitive } from "./primitives"
+import { Alias, Nil } from "./primitives"
 
 export type LookupArrayValue<T> = T | Alias<T>
 
@@ -9,5 +9,3 @@ export interface LookupObject<T> {
 }
 
 export type Lookup<T = any> = LookupArray<T> | LookupObject<T> | Nil
-
-export type Breakpoints = Alias<Primitive>[] | Nil
