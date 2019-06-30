@@ -2,10 +2,18 @@ import {
   Registry,
   Renderers,
   RegistryConfig,
+  RendererConfig,
   ExtendRegistryConfig,
   ParseRegistryConfig
 } from "./types"
-import { assign, isArray, isNumber, isObject, isString } from "./utils"
+import {
+  assign,
+  isArray,
+  isNumber,
+  isObject,
+  isString,
+  isPlainObject
+} from "./utils"
 
 export const registry: Registry = {}
 export const renderers: Renderers = {}
@@ -27,12 +35,13 @@ export function register(config: RegistryConfig | RegistryConfig[]) {
     config.forEach(register)
   } else {
     const parsedConfig: RegistryConfig = {}
-    // for (const key in config) {
-    //   const rendererConfig = parse(config[key])
-    //   const { propsKeys } = rendererConfig
-    //   rendererConfig.propsKeys = propsKeys ? [key].concat(propsKeys) : key
-    //   parsedConfig[key] = rendererConfig
-    // }
+    for (const key in config) {
+      const value = parse(config[key])
+      if (isPlainObject<RendererConfig>(value)) {
+        value.props = value.props ? [key].concat(value.props) : key
+      }
+      parsedConfig[key] = value
+    }
     assign(registry, parsedConfig)
   }
 }
