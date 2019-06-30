@@ -7,11 +7,11 @@ export interface ShadowConfig {
 
 export const shadowConfig: RegistryConfig<ShadowConfig> = {
   boxShadow: {
-    propsKeys: "bsh",
-    themeKeys: "boxShadows"
+    props: "bsh",
+    theme: "boxShadows"
   },
   textShadow: {
-    propsKeys: "tsh",
-    themeKeys: "textShadows"
+    props: "tsh",
+    theme: "textShadows"
   }
 }

@@ -4,12 +4,12 @@ import { addPx, addPcOrPx } from "../utils"
 import { extend } from "../registry"
 
 export const border = extend({
-  themeKeys: "borders",
+  theme: "borders",
   transform: addPx
 })
 
 export const color = extend({
-  themeKeys: "colors",
+  theme: "colors",
   lookup: {
     gray: ["#EEE", "#AAA", "#666"],
     text: "#222",
@@ -18,13 +18,13 @@ export const color = extend({
 })
 
 export const size = extend({
-  themeKeys: "sizes",
+  theme: "sizes",
   transform: addPcOrPx,
   lookup: PC_SCALE
 })
 
 export const space = extend({
-  themeKeys: "spaces",
+  theme: "spaces",
   transform: addPx,
   lookup: PX_SCALE
 })
@@ -37,11 +37,11 @@ export const edges = <C>(key: Key, alias: Key, parse: ParseRegistryConfig) =>
     [key + "Bottom"]: parse(alias + "b"),
     [key + "Left"]: parse(alias + "l"),
     [key + "X"]: parse({
-      propsKeys: alias + "x",
-      styleKeys: [key + "Left", key + "Right"]
+      props: alias + "x",
+      style: [key + "Left", key + "Right"]
     }),
     [key + "Y"]: parse({
-      propsKeys: alias + "y",
-      styleKeys: [key + "Top", key + "Bottom"]
+      props: alias + "y",
+      style: [key + "Top", key + "Bottom"]
     })
   } as RegistryConfig<C>)

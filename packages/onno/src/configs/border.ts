@@ -27,15 +27,15 @@ export const borderConfig = assign<
 >(edges("border", "bd", border), {
   borderColor: color("bdc"),
   borderStyle: {
-    propsKeys: "bds",
-    themeKeys: "borderStyles"
+    props: "bds",
+    theme: "borderStyles"
   },
   borderWidth: {
-    propsKeys: "bdw",
-    themeKeys: "borderWidths"
+    props: "bdw",
+    theme: "borderWidths"
   },
   borderRadius: size({
-    propsKeys: ["radius", "rad"],
-    themeKeys: ["borderRadii", "sizes"]
+    props: ["radius", "rad"],
+    theme: ["borderRadii", "sizes"]
   })
 })

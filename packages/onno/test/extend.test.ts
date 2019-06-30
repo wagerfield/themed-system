@@ -13,17 +13,17 @@ test("extends registry number config", () => {
     index: 2
   })
   expect(parser("foo")).toEqual({
-    propsKeys: "foo",
+    props: "foo",
     index: 1
   })
   expect(
     parser({
-      styleKeys: "sk",
-      themeKeys: "tk"
+      style: "sk",
+      theme: "tk"
     })
   ).toEqual({
-    styleKeys: "sk",
-    themeKeys: "tk",
+    style: "sk",
+    theme: "tk",
     index: 1
   })
 })
@@ -32,53 +32,53 @@ test("extends registry string config", () => {
   const parser = extend("foo")
 
   expect(parser(1)).toEqual({
-    propsKeys: "foo",
+    props: "foo",
     index: 1
   })
   expect(parser("bar")).toEqual({
-    propsKeys: "bar"
+    props: "bar"
   })
   expect(
     parser({
-      styleKeys: "sk",
-      themeKeys: "tk"
+      style: "sk",
+      theme: "tk"
     })
   ).toEqual({
-    propsKeys: "foo",
-    styleKeys: "sk",
-    themeKeys: "tk"
+    props: "foo",
+    style: "sk",
+    theme: "tk"
   })
 })
 
 test("extends registry object config", () => {
   const parser = extend({
-    propsKeys: "pk",
-    styleKeys: "sk",
-    themeKeys: "tk",
+    props: "pk",
+    style: "sk",
+    theme: "tk",
     index: 1
   })
 
   expect(parser(2)).toEqual({
-    propsKeys: "pk",
-    styleKeys: "sk",
-    themeKeys: "tk",
+    props: "pk",
+    style: "sk",
+    theme: "tk",
     index: 2
   })
   expect(parser("foo")).toEqual({
-    propsKeys: "foo",
-    styleKeys: "sk",
-    themeKeys: "tk",
+    props: "foo",
+    style: "sk",
+    theme: "tk",
     index: 1
   })
   expect(
     parser({
-      styleKeys: "sk2",
-      themeKeys: "tk2"
+      style: "sk2",
+      theme: "tk2"
     })
   ).toEqual({
-    propsKeys: "pk",
-    styleKeys: "sk2",
-    themeKeys: "tk2",
+    props: "pk",
+    style: "sk2",
+    theme: "tk2",
     index: 1
   })
 })

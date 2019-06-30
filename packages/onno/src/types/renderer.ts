@@ -4,9 +4,9 @@ import { Lookup } from "./lookup"
 export type Transform = (value: any) => any
 
 export interface RendererConfig {
-  propsKeys?: Key | Keys
-  styleKeys?: Key | Keys
-  themeKeys?: Key | Keys
+  props?: Key | Keys
+  style?: Key | Keys
+  theme?: Key | Keys
   transform?: Transform
   lookup?: Lookup
   index?: Index

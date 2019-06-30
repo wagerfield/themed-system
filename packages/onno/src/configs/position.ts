@@ -13,8 +13,8 @@ export interface PositionConfig {
 export const positionConfig: RegistryConfig<PositionConfig> = {
   position: "pos",
   zIndex: {
-    propsKeys: "zi",
-    themeKeys: "zIndices"
+    props: "zi",
+    theme: "zIndices"
   },
   top: size("t"),
   right: size("r"),

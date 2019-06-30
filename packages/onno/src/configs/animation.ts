@@ -7,9 +7,9 @@ export interface AnimationConfig {
 
 export const animationConfig: RegistryConfig<AnimationConfig> = {
   animation: {
-    themeKeys: "animations"
+    theme: "animations"
   },
   transition: {
-    themeKeys: "transitions"
+    theme: "transitions"
   }
 }

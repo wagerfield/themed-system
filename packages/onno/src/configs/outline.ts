@@ -11,20 +11,20 @@ export interface OutlineConfig {
 
 export const outlineConfig: RegistryConfig<OutlineConfig> = {
   outline: border({
-    propsKeys: "ol",
-    themeKeys: ["outlines", "borders"]
+    props: "ol",
+    theme: ["outlines", "borders"]
   }),
   outlineColor: color("olc"),
   outlineOffset: border({
-    propsKeys: "olo",
-    themeKeys: "outlineOffsets"
+    props: "olo",
+    theme: "outlineOffsets"
   }),
   outlineStyle: {
-    propsKeys: "ols",
-    themeKeys: ["outlineStyles", "borderStyles"]
+    props: "ols",
+    theme: ["outlineStyles", "borderStyles"]
   },
   outlineWidth: border({
-    propsKeys: "olw",
-    themeKeys: ["outlineWidths", "borderWidths"]
+    props: "olw",
+    theme: ["outlineWidths", "borderWidths"]
   })
 }

@@ -12,7 +12,7 @@ export const renderers: Renderers = {}
 
 export const parse: ParseRegistryConfig = (value) =>
   isString(value)
-    ? { propsKeys: value }
+    ? { props: value }
     : isNumber(value)
     ? { index: value }
     : isObject(value)

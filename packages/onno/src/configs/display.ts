@@ -9,8 +9,8 @@ export interface DisplayConfig {
 export const displayConfig: RegistryConfig<DisplayConfig> = {
   display: "d",
   opacity: {
-    propsKeys: "o",
-    themeKeys: "opacities"
+    props: "o",
+    theme: "opacities"
   },
   visibility: "vis"
 }

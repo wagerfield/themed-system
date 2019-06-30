@@ -18,31 +18,31 @@ export interface TypographyConfig {
 
 export const typographyConfig: RegistryConfig<TypographyConfig> = {
   fontFamily: {
-    propsKeys: "ff",
-    themeKeys: "fontFamilies"
+    props: "ff",
+    theme: "fontFamilies"
   },
   fontSize: {
-    propsKeys: "fs",
-    themeKeys: "fontSizes",
+    props: "fs",
+    theme: "fontSizes",
     transform: addPx,
     lookup: [12, 14, 16, 20, 24, 32, 40, 48, 56, 64]
   },
   fontSmoothing: {
-    propsKeys: "fsm",
-    styleKeys: "WebkitFontSmoothing"
+    props: "fsm",
+    style: "WebkitFontSmoothing"
   },
   fontStyle: "fst",
   fontWeight: {
-    propsKeys: "fw",
-    themeKeys: "fontWeights",
+    props: "fw",
+    theme: "fontWeights",
     lookup: {
       normal: 400,
       bold: 700
     }
   },
   lineHeight: {
-    propsKeys: "lh",
-    themeKeys: "lineHeights",
+    props: "lh",
+    theme: "lineHeights",
     lookup: {
       normal: 1.5,
       narrow: 1.25,
@@ -50,8 +50,8 @@ export const typographyConfig: RegistryConfig<TypographyConfig> = {
     }
   },
   letterSpacing: {
-    propsKeys: "ls",
-    themeKeys: "letterSpacings",
+    props: "ls",
+    theme: "letterSpacings",
     transform: addPx
   },
   textAlign: "ta",

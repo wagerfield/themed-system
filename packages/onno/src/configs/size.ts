@@ -1,8 +1,8 @@
 import { Key, RegistryConfig } from "../types"
 import { size } from "./common"
 
-const extendSize = (propsKeys: Key, themeKey: Key) =>
-  size({ propsKeys, themeKeys: [themeKey, "sizes"] })
+const extendSize = (props: Key, theme: Key) =>
+  size({ props, theme: [theme, "sizes"] })
 
 // Width
 
@@ -40,7 +40,7 @@ export interface SizeConfig {
 
 export const sizeConfig: RegistryConfig<SizeConfig> = {
   size: size({
-    propsKeys: "s",
-    styleKeys: ["width", "height"]
+    props: "s",
+    style: ["width", "height"]
   })
 }

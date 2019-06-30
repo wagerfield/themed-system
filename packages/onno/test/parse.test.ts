@@ -9,14 +9,14 @@ test("number values", () => {
 })
 
 test("string values", () => {
-  expect(parse("a")).toEqual({ propsKeys: "a" })
+  expect(parse("a")).toEqual({ props: "a" })
 })
 
 test("object values", () => {
   const config = {
-    propsKeys: "p",
-    styleKeys: "s",
-    themeKeys: "t"
+    props: "p",
+    style: "s",
+    theme: "t"
   }
   expect(parse(config)).toBe(config)
 })
