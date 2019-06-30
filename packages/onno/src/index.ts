@@ -1,11 +1,11 @@
 export * from "./constants"
 export * from "./utils"
-export { extend, register } from "./core"
+export { extend, register } from "./registry"
 
-import { register } from "./core"
+import { register } from "./registry"
 import {
-  miscConfig,
-  alignConfig,
+  alignParentConfig,
+  alignChildConfig,
   animationConfig,
   backgroundConfig,
   borderConfig,
@@ -14,20 +14,24 @@ import {
   flexChildConfig,
   gridParentConfig,
   gridChildConfig,
-  marginConfig,
-  paddingConfig,
+  miscConfig,
   outlineConfig,
   overflowConfig,
   positionConfig,
   shadowConfig,
+  widthConfig,
+  heightConfig,
+  setsConfig,
   sizeConfig,
-  textConfig,
-  transformConfig
-} from "./renderers"
+  marginConfig,
+  paddingConfig,
+  transformConfig,
+  typographyConfig
+} from "./configs"
 
 register([
-  miscConfig,
-  alignConfig,
+  alignParentConfig,
+  alignChildConfig,
   animationConfig,
   backgroundConfig,
   borderConfig,
@@ -36,13 +40,17 @@ register([
   flexChildConfig,
   gridParentConfig,
   gridChildConfig,
-  marginConfig,
-  paddingConfig,
+  miscConfig,
   outlineConfig,
   overflowConfig,
   positionConfig,
   shadowConfig,
+  widthConfig,
+  heightConfig,
+  setsConfig,
   sizeConfig,
-  textConfig,
-  transformConfig
+  marginConfig,
+  paddingConfig,
+  transformConfig,
+  typographyConfig
 ])

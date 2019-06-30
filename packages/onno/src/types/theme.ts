@@ -1,5 +1,5 @@
-import { Lookup } from "./lookup"
 import { Breakpoints } from "./breakpoints"
+import { Lookup } from "./lookup"
 
 export interface Theme {
   [key: string]: Lookup

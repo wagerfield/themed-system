@@ -1,18 +1,15 @@
-import * as C from "csstype"
-import * as T from "../types"
+import { RegistryConfig } from "../types"
 import { border, color } from "./configs"
 
 export interface OutlineConfig {
-  outline: [C.OutlineProperty<T.Length>, "ol"]
-  outlineColor: [C.OutlineColorProperty, "olc"]
-  outlineOffset: [C.OutlineOffsetProperty<T.Length>, "olo"]
-  outlineStyle: [C.OutlineStyleProperty, "ols"]
-  outlineWidth: [C.OutlineWidthProperty<T.Length>, "olw"]
+  outline: "ol"
+  outlineColor: "olc"
+  outlineOffset: "olo"
+  outlineStyle: "ols"
+  outlineWidth: "olw"
 }
 
-export type OutlineProps = T.ResponsiveProps<OutlineConfig>
-
-export const outlineConfig: T.RegistryConfig<OutlineConfig> = {
+export const outlineConfig: RegistryConfig<OutlineConfig> = {
   outline: border({
     propsKeys: "ol",
     themeKeys: ["outlines", "borders"]

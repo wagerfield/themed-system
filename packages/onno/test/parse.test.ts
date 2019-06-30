@@ -1,7 +1,15 @@
-import { parse } from "../src/core"
+import { parse } from "../src/registry"
+
+test("array values", () => {
+  expect(parse(["a", "b"])).toEqual(["a", "b"])
+})
 
 test("number values", () => {
   expect(parse(1)).toEqual({ index: 1 })
+})
+
+test("string values", () => {
+  expect(parse("a")).toEqual({ propsKeys: "a" })
 })
 
 test("object values", () => {
@@ -11,14 +19,6 @@ test("object values", () => {
     themeKeys: "t"
   }
   expect(parse(config)).toBe(config)
-})
-
-test("string values", () => {
-  expect(parse("a")).toEqual({ propsKeys: "a" })
-})
-
-test("string[] values", () => {
-  expect(parse(["a", "b"])).toEqual({ propsKeys: ["a", "b"] })
 })
 
 test("invalid values", () => {

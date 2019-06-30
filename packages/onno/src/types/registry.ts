@@ -1,16 +1,28 @@
 import { Index, Key, Keys } from "./primitives"
-import { Renderer, RendererConfig } from "./renderer"
+import { RendererConfig } from "./renderer"
 
-export type RegistryConfigValue = Index | Key | Keys | RendererConfig
+// Registry
 
-export type RegistryConfig<T = any> = {
-  [K in keyof T]: RegistryConfigValue
-}
-
-export type RegistryConfigParser = (
-  value: RegistryConfigValue
-) => RendererConfig
+export type RegistryValue = Keys | RendererConfig
 
 export interface Registry {
-  [key: string]: Renderer
+  [key: string]: RegistryValue
 }
+
+// Registry Config
+
+export type RegistryConfigValue = RegistryValue | Index | Key
+
+export type RegistryConfig<C = any> = {
+  [K in keyof C]: RegistryConfigValue
+}
+
+// Parse Registry Config
+
+export type ParseRegistryConfig = (value: RegistryConfigValue) => RegistryValue
+
+// Extend Registry Config
+
+export type ExtendRegistryConfig = (
+  value: RegistryConfigValue
+) => ParseRegistryConfig

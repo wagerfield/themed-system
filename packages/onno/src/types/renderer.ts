@@ -14,7 +14,7 @@ export interface RendererConfig {
 
 export interface Renderer {
   <P>(props: P): any
-  filter: <P>(props: P, ...keys: Keys) => Partial<P>
+  filter: <P>(props: P, ...exclude: Keys) => Partial<P>
   config: RendererConfig
 }
 

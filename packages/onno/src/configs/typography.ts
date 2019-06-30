@@ -1,32 +1,22 @@
-import * as C from "csstype"
-import * as T from "../types"
+import { RegistryConfig } from "../types"
 import { addPx } from "../utils"
 import { color } from "./configs"
 
-type FontSmoothingValue =
-  | C.Globals
-  | "auto"
-  | "none"
-  | "antialiased"
-  | "subpixel-antialiased"
-
-export interface TextConfig {
-  fontFamily: [C.FontFamilyProperty, "ff"]
-  fontSize: [C.FontSizeProperty<T.Length>, "fs"]
-  fontSmoothing: [FontSmoothingValue, "fsm"]
-  fontStyle: [C.FontStyleProperty, "fst"]
-  fontWeight: [C.FontWeightProperty, "fw"]
-  lineHeight: [C.LineHeightProperty<T.Length>, "lh"]
-  letterSpacing: [C.LetterSpacingProperty<T.Length>, "ls"]
-  textAlign: [C.TextAlignProperty, "ta"]
-  textDecoration: [C.TextDecorationProperty, "td"]
-  textTransform: [C.TextTransformProperty, "tt"]
-  color: [C.ColorProperty, "tc"]
+export interface TypographyConfig {
+  fontFamily: "ff"
+  fontSize: "fs"
+  fontSmoothing: "fsm"
+  fontStyle: "fst"
+  fontWeight: "fw"
+  lineHeight: "lh"
+  letterSpacing: "ls"
+  textAlign: "ta"
+  textDecoration: "td"
+  textTransform: "tt"
+  color: "tc"
 }
 
-export type TextProps = T.ResponsiveProps<TextConfig>
-
-export const textConfig: T.RegistryConfig<TextConfig> = {
+export const typographyConfig: RegistryConfig<TypographyConfig> = {
   fontFamily: {
     propsKeys: "ff",
     themeKeys: "fontFamilies"

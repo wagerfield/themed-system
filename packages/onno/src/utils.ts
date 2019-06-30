@@ -1,6 +1,10 @@
 import { Func } from "./types"
 
+export const keys = Object.keys
+
 export const assign = Object.assign
+
+export const concat = (...args: any[]) => [].concat(...args)
 
 export const isType = <T>(type: string) => <U extends T = T>(
   value: any

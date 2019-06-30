@@ -1,4 +1,4 @@
-import { extend } from "../src/core"
+import { extend } from "../src/registry"
 
 test("returns registry config parser", () => {
   const parser = extend(1)
@@ -16,10 +16,6 @@ test("extends registry number config", () => {
     propsKeys: "foo",
     index: 1
   })
-  expect(parser(["foo", "bar"])).toEqual({
-    propsKeys: ["foo", "bar"],
-    index: 1
-  })
   expect(
     parser({
       styleKeys: "sk",
@@ -29,6 +25,28 @@ test("extends registry number config", () => {
     styleKeys: "sk",
     themeKeys: "tk",
     index: 1
+  })
+})
+
+test("extends registry string config", () => {
+  const parser = extend("foo")
+
+  expect(parser(1)).toEqual({
+    propsKeys: "foo",
+    index: 1
+  })
+  expect(parser("bar")).toEqual({
+    propsKeys: "bar"
+  })
+  expect(
+    parser({
+      styleKeys: "sk",
+      themeKeys: "tk"
+    })
+  ).toEqual({
+    propsKeys: "foo",
+    styleKeys: "sk",
+    themeKeys: "tk"
   })
 })
 
@@ -52,12 +70,6 @@ test("extends registry object config", () => {
     themeKeys: "tk",
     index: 1
   })
-  expect(parser(["foo", "bar"])).toEqual({
-    propsKeys: ["foo", "bar"],
-    styleKeys: "sk",
-    themeKeys: "tk",
-    index: 1
-  })
   expect(
     parser({
       styleKeys: "sk2",
@@ -68,52 +80,5 @@ test("extends registry object config", () => {
     styleKeys: "sk2",
     themeKeys: "tk2",
     index: 1
-  })
-})
-
-test("extends registry string config", () => {
-  const parser = extend("foo")
-
-  expect(parser(1)).toEqual({
-    propsKeys: "foo",
-    index: 1
-  })
-  expect(parser("bar")).toEqual({
-    propsKeys: "bar"
-  })
-  expect(parser(["foo", "bar"])).toEqual({
-    propsKeys: ["foo", "bar"]
-  })
-  expect(
-    parser({
-      styleKeys: "sk",
-      themeKeys: "tk"
-    })
-  ).toEqual({
-    propsKeys: "foo",
-    styleKeys: "sk",
-    themeKeys: "tk"
-  })
-})
-
-test("extends registry string[] config", () => {
-  const parser = extend(["foo", "bar"])
-
-  expect(parser(1)).toEqual({
-    propsKeys: ["foo", "bar"],
-    index: 1
-  })
-  expect(parser("foo")).toEqual({
-    propsKeys: "foo"
-  })
-  expect(
-    parser({
-      styleKeys: "sk",
-      themeKeys: "tk"
-    })
-  ).toEqual({
-    propsKeys: ["foo", "bar"],
-    styleKeys: "sk",
-    themeKeys: "tk"
   })
 })
