@@ -1,5 +1,5 @@
 import { RegistryConfig } from "../types"
-import { color, size } from "./configs"
+import { color, size } from "./common"
 
 export interface BackgroundConfig {
   background: "bg"

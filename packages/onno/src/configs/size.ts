@@ -1,5 +1,5 @@
 import { Key, RegistryConfig } from "../types"
-import { size } from "./configs"
+import { size } from "./common"
 
 const extendSize = (propsKeys: Key, themeKey: Key) =>
   size({ propsKeys, themeKeys: [themeKey, "sizes"] })

@@ -1,5 +1,5 @@
 import { RegistryConfig } from "../types"
-import { space } from "./configs"
+import { space } from "./common"
 
 // Grid Parent
 

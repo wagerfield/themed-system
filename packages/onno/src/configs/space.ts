@@ -1,4 +1,4 @@
-import { edges, space } from "./configs"
+import { edges, space } from "./common"
 
 // Margin
 

@@ -1,5 +1,5 @@
 import { RegistryConfig } from "../types"
-import { color } from "./configs"
+import { color } from "./common"
 
 export interface MiscConfig {
   fill: "fc"

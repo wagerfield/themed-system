@@ -1,5 +1,5 @@
 import { RegistryConfig } from "../types"
-import { border, color } from "./configs"
+import { border, color } from "./common"
 
 export interface OutlineConfig {
   outline: "ol"

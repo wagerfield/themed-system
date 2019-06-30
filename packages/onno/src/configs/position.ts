@@ -1,5 +1,5 @@
 import { RegistryConfig } from "../types"
-import { size } from "./configs"
+import { size } from "./common"
 
 export interface PositionConfig {
   position: "pos"

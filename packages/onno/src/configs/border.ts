@@ -1,6 +1,6 @@
 import { RegistryConfig } from "../types"
 import { assign } from "../utils"
-import { border, color, edges, size } from "./configs"
+import { border, color, edges, size } from "./common"
 
 interface BorderEdgesConfig {
   border: "bd"

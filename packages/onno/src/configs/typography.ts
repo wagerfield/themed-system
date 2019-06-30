@@ -1,6 +1,6 @@
 import { RegistryConfig } from "../types"
 import { addPx } from "../utils"
-import { color } from "./configs"
+import { color } from "./common"
 
 export interface TypographyConfig {
   fontFamily: "ff"
