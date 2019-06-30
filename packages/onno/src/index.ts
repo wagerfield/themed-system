@@ -1,6 +1,6 @@
 export * from "./constants"
 export * from "./utils"
-export { extend, register } from "./registry"
+export { register, extend } from "./registry"
 
 import { register } from "./registry"
 import {
