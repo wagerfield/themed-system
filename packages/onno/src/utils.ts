@@ -26,6 +26,8 @@ export const isString = isType<string>("string")
 
 export const isObject = and<object>(not(isNil), isType<object>("object"))
 
+export const isPlainObject = and<object>(isObject, not(isArray))
+
 export const isNumber = and<number>(not(isNaN), isType<number>("number"))
 
 export const isNumberLike = (x: any): x is number =>
