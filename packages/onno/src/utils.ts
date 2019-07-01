@@ -2,9 +2,9 @@ import { Func, Pred } from "./types"
 
 const NUMBER = /^-?(\d*\.)?\d+$/
 
-export const keys = Object.keys
+export const { isArray } = Array
 
-export const assign = Object.assign
+export const { assign, keys } = Object
 
 export const concat = (...args: any[]) => [].concat(...args)
 
@@ -17,8 +17,6 @@ export const isType = <T>(type: string) => <U extends T = T>(x: any): x is U =>
   typeof x === type
 
 export const isNil = (x: any): x is void => x == null
-
-export const isArray = Array.isArray
 
 export const isFunction = isType<Func>("function")
 
