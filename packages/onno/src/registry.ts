@@ -1,4 +1,5 @@
 import {
+  Keys,
   Registry,
   Renderers,
   RegistryConfig,
@@ -15,8 +16,8 @@ import {
   isPlainObject
 } from "./utils"
 
-export const registry: Registry = {}
-export const renderers: Renderers = {}
+export let registry: Registry = {}
+export let renderers: Renderers = {}
 
 export const parse: ParseRegistryConfig = (value) =>
   isString(value)
@@ -32,16 +33,26 @@ export const extend: ExtendRegistryConfig = (a) => (b) =>
 
 export function register(config: RegistryConfig | RegistryConfig[]) {
   if (isArray(config)) {
-    config.forEach(register)
+    config.map(register)
   } else {
-    const parsedConfig: RegistryConfig = {}
+    const values: Registry = {}
     for (const key in config) {
-      const value = parse(config[key])
+      const value = (values[key] = parse(config[key]))
       if (isPlainObject<RendererConfig>(value)) {
         value.props = value.props ? [key].concat(value.props) : key
       }
-      parsedConfig[key] = value
     }
-    assign(registry, parsedConfig)
+    assign(registry, values)
   }
+}
+
+export function unregister(keys: Keys) {
+  for (const key of keys) {
+    delete registry[key]
+  }
+}
+
+export function clear() {
+  renderers = {}
+  registry = {}
 }
