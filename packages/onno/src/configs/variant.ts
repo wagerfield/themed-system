@@ -1,5 +1,4 @@
-import { RegistryConfig } from "../types"
-import { variant } from "./common"
+import { RegistryConfig, RendererConfig, RendererKeys } from "../types"
 
 export interface VariantConfig {
   textStyle: "tst"
@@ -9,20 +8,19 @@ export interface VariantConfig {
   globalStyle: "gst"
 }
 
+export const variant = (
+  props: RendererKeys,
+  theme: RendererKeys
+): RendererConfig => ({
+  props,
+  theme,
+  style: null
+})
+
 export const variantConfig: RegistryConfig<VariantConfig> = {
-  textStyle: variant({
-    theme: "textStyles"
-  }),
-  colorStyle: variant({
-    theme: "colorStyles"
-  }),
-  inputStyle: variant({
-    theme: "inputStyles"
-  }),
-  buttonStyle: variant({
-    theme: "buttonStyles"
-  }),
-  globalStyle: variant({
-    theme: "globalStyles"
-  })
+  textStyle: variant("tst", "textStyles"),
+  colorStyle: variant("cst", "colorStyles"),
+  inputStyle: variant("ist", "inputStyles"),
+  buttonStyle: variant("bst", "buttonStyles"),
+  globalStyle: variant("gst", "globalStyles")
 }
