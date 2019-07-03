@@ -3,10 +3,12 @@ import { Lookup } from "./lookup"
 
 export type Transform = (value: any) => any
 
+export type RendererKeys = Key | Keys | null
+
 export interface RendererConfig {
-  props?: Key | Keys
-  style?: Key | Keys
-  theme?: Key | Keys
+  props?: RendererKeys
+  theme?: RendererKeys
+  style?: RendererKeys
   transform?: Transform
   lookup?: Lookup
   index?: Index
