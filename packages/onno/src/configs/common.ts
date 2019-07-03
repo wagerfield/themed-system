@@ -29,6 +29,11 @@ export const space = extend({
   lookup: PX_SCALE
 })
 
+export const variant = extend({
+  theme: "spaces",
+  style: null
+})
+
 export const edges = <C>(key: Key, alias: Key, parse: ParseRegistryConfig) =>
   ({
     [key]: parse(alias),
