@@ -1,7 +1,11 @@
 import { Alias, Primitive } from "./primitives"
 
-export type BreakpointKey = "all" | "xs" | "sm" | "md" | "lg" | "xl"
+export type BreakpointKey = "xs" | "sm" | "md" | "lg" | "xl"
 
-export type BreakpointAlias = Alias<Primitive, BreakpointKey>
+export type BreakpointValue = Primitive
+
+export type BreakpointAlias = Alias<BreakpointValue, BreakpointKey>
+
+export type BreakpointMap = Record<BreakpointKey, BreakpointValue>
 
 export type Breakpoints = BreakpointAlias[]
