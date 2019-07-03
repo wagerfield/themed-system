@@ -1,12 +1,12 @@
 import { Properties, Pseudos } from "csstype"
+import { Primitive, Nil } from "./primitives"
 import { BreakpointKey } from "./breakpoints"
-import { Primitive } from "./primitives"
 
 // Responsive
 
 export type ResponsiveArray<V> = V[]
 
-export type ResponsiveObject<V> = Partial<Record<BreakpointKey, V>>
+export type ResponsiveObject<V> = { [K in BreakpointKey]?: V }
 
 export type ResponsiveValue<V> = V | ResponsiveArray<V> | ResponsiveObject<V>
 
@@ -16,17 +16,17 @@ export type ResponsiveMap<T> = {
 
 // CSS
 
-export interface CSSProperties extends Properties<Primitive> {}
+export type CSSProperties = ResponsiveMap<Properties<Primitive>>
 
-export type CSSPseudos<T> = { [K in Pseudos]?: T }
+export type CSSPseudos = { [K in Pseudos]?: CSSObject }
 
-export type CSSObject<T> = T & CSSPseudos<T>
+export type CSSBreakpoints = ResponsiveObject<CSSObject>
 
-export type CSSKey = keyof CSSProperties
+export interface CSSObject extends CSSProperties, CSSPseudos, CSSBreakpoints {
+  [key: string]: CSSObject | ResponsiveValue<Primitive | Nil>
+}
 
-export type CSSKeys = CSSKey[]
-
-export type CSS = CSSObject<ResponsiveMap<CSSProperties>>
+export type CSS = Nil | CSSObject | CSSObject[]
 
 // type FontSmoothingValue =
 //   | C.Globals
