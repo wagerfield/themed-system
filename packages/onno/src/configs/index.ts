@@ -1,3 +1,49 @@
+import { AlignParentConfig, AlignChildConfig } from "./align"
+import { AnimationConfig } from "./animation"
+import { BackgroundConfig } from "./background"
+import { BorderConfig } from "./border"
+import { DisplayConfig } from "./display"
+import { FlexParentConfig, FlexChildConfig } from "./flex"
+import { GridParentConfig, GridChildConfig } from "./grid"
+import { MiscConfig } from "./misc"
+import { OutlineConfig } from "./outline"
+import { OverflowConfig } from "./overflow"
+import { PositionConfig } from "./position"
+import { ShadowConfig } from "./shadow"
+import { WidthConfig, HeightConfig, SizeConfig } from "./size"
+import { MarginConfig, PaddingConfig } from "./space"
+import { TransformConfig } from "./transform"
+import { TypographyConfig } from "./typography"
+import { VariantConfig } from "./variant"
+
+export type Configs = AlignParentConfig &
+  AlignChildConfig &
+  AnimationConfig &
+  BackgroundConfig &
+  BorderConfig &
+  DisplayConfig &
+  FlexParentConfig &
+  FlexChildConfig &
+  GridParentConfig &
+  GridChildConfig &
+  MiscConfig &
+  OutlineConfig &
+  OverflowConfig &
+  PositionConfig &
+  ShadowConfig &
+  WidthConfig &
+  HeightConfig &
+  SizeConfig &
+  MarginConfig &
+  PaddingConfig &
+  TransformConfig &
+  TypographyConfig &
+  VariantConfig
+
+export type ConfigKey = keyof Configs
+
+export type ConfigKeys = ConfigKey[]
+
 export * from "./space"
 export * from "./align"
 export * from "./animation"
