@@ -1,4 +1,5 @@
 import { Index, Key, Keys } from "./primitives"
+import { CSSObject } from "./css"
 import { Lookup } from "./lookup"
 
 export type Transform = (value: any) => any
@@ -15,8 +16,7 @@ export interface RendererConfig {
 }
 
 export interface Renderer {
-  <P>(props: P): any
-  filter: <P>(props: P, ...exclude: Keys) => Partial<P>
+  <P>(props: P): CSSObject
   config: RendererConfig
 }
 
