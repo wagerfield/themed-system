@@ -1,6 +1,8 @@
 export * from "./constants"
 export * from "./utils"
 export { register, unregister, clear, extend } from "./registry"
+export { css } from "./css"
+export { props } from "./props"
 
 import { register } from "./registry"
 import {
