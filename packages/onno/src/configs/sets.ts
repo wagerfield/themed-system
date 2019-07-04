@@ -13,6 +13,7 @@ import { widthConfig, heightConfig } from "./size"
 import { marginConfig, paddingConfig } from "./space"
 import { transformConfig } from "./transform"
 import { typographyConfig } from "./typography"
+import { variantConfig } from "./variant"
 
 export interface SetsConfig {
   backgroundSet: never
@@ -37,6 +38,7 @@ export interface SetsConfig {
   spaceSet: never
   transformSet: never
   typographySet: never
+  variantSet: never
 }
 
 // Align
@@ -93,5 +95,6 @@ export const setsConfig: RegistryConfig<SetsConfig> = {
   paddingSet,
   spaceSet: concat(marginSet, paddingSet),
   transformSet: keys(transformConfig),
-  typographySet: keys(typographyConfig)
+  typographySet: keys(typographyConfig),
+  variantSet: keys(variantConfig)
 }
