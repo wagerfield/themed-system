@@ -2,6 +2,13 @@ import { RegistryConfig } from "../types"
 import { addPx } from "../utils"
 import { color } from "./common"
 
+// type FontSmoothingValue =
+//   | C.Globals
+//   | "auto"
+//   | "none"
+//   | "antialiased"
+//   | "subpixel-antialiased"
+
 export interface TypographyConfig {
   fontFamily: "ff"
   fontSize: "fs"
