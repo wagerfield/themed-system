@@ -15,6 +15,7 @@ import { MarginConfig, PaddingConfig } from "./space"
 import { TransformConfig } from "./transform"
 import { TypographyConfig } from "./typography"
 import { VariantConfig } from "./variant"
+import { SetsConfig } from "./sets"
 
 export type Configs = AlignParentConfig &
   AlignChildConfig &
@@ -38,7 +39,8 @@ export type Configs = AlignParentConfig &
   PaddingConfig &
   TransformConfig &
   TypographyConfig &
-  VariantConfig
+  VariantConfig &
+  SetsConfig
 
 export type ConfigKey = keyof Configs
 
@@ -61,3 +63,4 @@ export * from "./size"
 export * from "./transform"
 export * from "./typography"
 export * from "./variant"
+export * from "./sets"

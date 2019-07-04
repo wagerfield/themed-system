@@ -21,7 +21,7 @@ describe("css", () => {
 })
 
 describe("props", () => {
-  const render = props(["color", "display"])
+  const render = props(["color", "sizeSet"])
 
   test("styled-components css", () => {
     styledCSS(render)

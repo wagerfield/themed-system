@@ -28,7 +28,8 @@ import {
   paddingConfig,
   transformConfig,
   typographyConfig,
-  variantConfig
+  variantConfig,
+  setsConfig
 } from "./configs"
 
 register([
@@ -54,5 +55,6 @@ register([
   paddingConfig,
   transformConfig,
   typographyConfig,
-  variantConfig
+  variantConfig,
+  setsConfig
 ])

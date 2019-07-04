@@ -10,7 +10,7 @@ describe("css", () => {
 })
 
 describe("props", () => {
-  const render = props(["color", "display"])
+  const render = props(["color", "sizeSet"])
 
   test("emotion css", () => {
     emotionCSS(render({}))
