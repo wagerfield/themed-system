@@ -44,8 +44,6 @@ export type Configs = AlignParentConfig &
 
 export type ConfigKey = keyof Configs
 
-export type ConfigKeys = ConfigKey[]
-
 export * from "./space"
 export * from "./align"
 export * from "./animation"
