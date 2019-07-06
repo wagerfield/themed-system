@@ -1,8 +1,9 @@
 export * from "./constants"
 export * from "./utils"
+export * from "./filter"
 export { register, unregister, clear, extend } from "./registry"
 export { css } from "./css"
-export { props } from "./props"
+export { map } from "./map"
 
 import { register } from "./registry"
 import {

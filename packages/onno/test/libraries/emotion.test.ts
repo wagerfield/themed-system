@@ -1,5 +1,5 @@
 import { css as emotionCSS } from "emotion"
-import { css, props } from "../../src"
+import { css, map } from "../../src"
 
 describe("css", () => {
   const styles = css({ direction: "ltr" })
@@ -9,8 +9,8 @@ describe("css", () => {
   })
 })
 
-describe("props", () => {
-  const render = props(["color", "sizeSet"])
+describe("map", () => {
+  const render = map(["boxSizing", "sizeSet"])
 
   test("emotion css", () => {
     emotionCSS(render({}))

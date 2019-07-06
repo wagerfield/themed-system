@@ -1,5 +1,7 @@
+/* tslint:disable:no-unused-expression */
+
 import styled, { css as styledCSS } from "styled-components"
-import { css, props } from "../../src"
+import { css, map } from "../../src"
 
 describe("css", () => {
   const styles = css({ direction: "ltr" })
@@ -13,15 +15,14 @@ describe("css", () => {
   })
 
   test("styled-components styled template", () => {
-    // tslint:disable-next-line
     styled.a`
       ${styles}
     `
   })
 })
 
-describe("props", () => {
-  const render = props(["color", "sizeSet"])
+describe("map", () => {
+  const render = map(["boxSizing", "sizeSet"])
 
   test("styled-components css", () => {
     styledCSS(render)
@@ -32,7 +33,6 @@ describe("props", () => {
   })
 
   test("styled-components styled template", () => {
-    // tslint:disable-next-line
     styled.a`
       ${render}
     `
