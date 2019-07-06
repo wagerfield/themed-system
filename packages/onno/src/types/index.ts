@@ -1,6 +1,7 @@
 export * from "./primitives"
 export * from "./breakpoints"
 export * from "./lookup"
+export * from "./filter"
 export * from "./css"
 export * from "./theme"
 export * from "./renderer"
