@@ -46,3 +46,9 @@ export const addRem = when(isUnitless)((x) => x + "rem")
 export const addPcOrPx = (x: any) => addPx(addPc(x))
 
 export const mq = (x: any) => `@media(min-width: ${addPx(x)})`
+
+export const uniq = (x: any[]) =>
+  x.reduce((acc, val) => {
+    if (!acc.includes(val)) acc.push(val)
+    return acc
+  }, [])
