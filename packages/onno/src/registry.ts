@@ -1,4 +1,5 @@
 import {
+  Key,
   Keys,
   Registry,
   Renderers,
@@ -8,6 +9,7 @@ import {
   ParseRegistryConfig
 } from "./types"
 import {
+  uniq,
   assign,
   isArray,
   isNumber,
@@ -55,4 +57,24 @@ export function unregister(keys: Keys) {
 export function clear() {
   renderers = {}
   registry = {}
+}
+
+export function getKeys<K extends Key>(
+  keys: Keys,
+  unique: boolean = true,
+  initial: Keys = []
+): K[] {
+  const result = keys.reduce((acc, key) => {
+    const value = registry[key]
+    const props = (value && (value as RendererConfig).props) || key
+    if (isArray(value)) {
+      getKeys(value, false, initial)
+    } else if (isArray(props)) {
+      acc.push(...props)
+    } else {
+      acc.push(props)
+    }
+    return acc
+  }, initial)
+  return unique ? uniq(result) : result
 }
