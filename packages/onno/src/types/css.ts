@@ -1,5 +1,6 @@
 import { Properties, Pseudos } from "csstype"
-import { Keys, Nil, Primitive } from "./primitives"
+import { Key, Nil, Primitive } from "./primitives"
+import { OmitProps, PickProps } from "./filter"
 import { BreakpointKey } from "./breakpoints"
 
 // Responsive
@@ -26,17 +27,19 @@ export type CSSPseudos = PseudoMap<CSSObject>
 
 export type CSSProperties = Properties<Primitive>
 
+export type CSSKey = keyof CSSProperties
+
 export interface CSSObject extends CSSProperties, CSSPseudos {
   [key: string]: CSSObject | CSSValue
 }
 
 export type CSS = CSSObject[]
 
-export interface CSSRenderer<T extends Keys> {
+export interface CSSRenderer<K extends Key> {
   <P>(props: P): CSS
-  // omit: <P, K extends keyof P>(props: P, ...keys: K[]) => Omit<P, K>
-  // pick: <P, K extends keyof P>(props: P, ...keys: K[]) => Pick<P, K>
-  keys: T
+  omit: OmitProps<K>
+  pick: PickProps<K>
+  keys: K[]
 }
 
 // Style
