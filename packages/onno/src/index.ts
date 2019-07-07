@@ -1,6 +1,6 @@
 export * from "./constants"
 export * from "./utils"
-export * from "./filter"
+export { omit, pick } from "./filter"
 export { register, unregister, clear, extend } from "./registry"
 export { css } from "./css"
 export { map } from "./map"

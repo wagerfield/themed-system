@@ -1,115 +1,115 @@
 {
   "packages/onno/cjs/index.js": {
-    "bundled": 10790,
-    "minified": 8074,
-    "gzipped": 2879
+    "bundled": 11048,
+    "minified": 8157,
+    "gzipped": 2931
   },
   "packages/onno/esm/index.js": {
-    "bundled": 10219,
-    "minified": 7476,
-    "gzipped": 2734,
+    "bundled": 10485,
+    "minified": 7567,
+    "gzipped": 2789,
     "treeshaked": {
       "rollup": {
         "code": 4532,
         "import_statements": 0
       },
       "webpack": {
-        "code": 5590
+        "code": 5735
       }
     }
   },
   "packages/onno-react/cjs/index.js": {
-    "bundled": 10790,
-    "minified": 8074,
-    "gzipped": 2879
+    "bundled": 11048,
+    "minified": 8157,
+    "gzipped": 2931
   },
   "packages/onno-react/esm/index.js": {
-    "bundled": 10219,
-    "minified": 7476,
-    "gzipped": 2734,
+    "bundled": 10485,
+    "minified": 7567,
+    "gzipped": 2789,
     "treeshaked": {
       "rollup": {
         "code": 4532,
         "import_statements": 0
       },
       "webpack": {
-        "code": 5590
+        "code": 5735
       }
     }
   },
   "packages/onno-vue/cjs/index.js": {
-    "bundled": 10790,
-    "minified": 8074,
-    "gzipped": 2879
+    "bundled": 11048,
+    "minified": 8157,
+    "gzipped": 2931
   },
   "packages/onno-vue/esm/index.js": {
-    "bundled": 10219,
-    "minified": 7476,
-    "gzipped": 2734,
+    "bundled": 10485,
+    "minified": 7567,
+    "gzipped": 2789,
     "treeshaked": {
       "rollup": {
         "code": 4532,
         "import_statements": 0
       },
       "webpack": {
-        "code": 5590
+        "code": 5735
       }
     }
   },
   "packages/onco/cjs/index.js": {
-    "bundled": 10790,
-    "minified": 8074,
-    "gzipped": 2879
+    "bundled": 11048,
+    "minified": 8157,
+    "gzipped": 2931
   },
   "packages/onco/esm/index.js": {
-    "bundled": 10219,
-    "minified": 7476,
-    "gzipped": 2734,
+    "bundled": 10485,
+    "minified": 7567,
+    "gzipped": 2789,
     "treeshaked": {
       "rollup": {
         "code": 4532,
         "import_statements": 0
       },
       "webpack": {
-        "code": 5590
+        "code": 5735
       }
     }
   },
   "packages/onco-react/cjs/index.js": {
-    "bundled": 10790,
-    "minified": 8074,
-    "gzipped": 2879
+    "bundled": 11048,
+    "minified": 8157,
+    "gzipped": 2931
   },
   "packages/onco-react/esm/index.js": {
-    "bundled": 10219,
-    "minified": 7476,
-    "gzipped": 2734,
+    "bundled": 10485,
+    "minified": 7567,
+    "gzipped": 2789,
     "treeshaked": {
       "rollup": {
         "code": 4532,
         "import_statements": 0
       },
       "webpack": {
-        "code": 5590
+        "code": 5735
       }
     }
   },
   "packages/onco-vue/cjs/index.js": {
-    "bundled": 10790,
-    "minified": 8074,
-    "gzipped": 2879
+    "bundled": 11048,
+    "minified": 8157,
+    "gzipped": 2931
   },
   "packages/onco-vue/esm/index.js": {
-    "bundled": 10219,
-    "minified": 7476,
-    "gzipped": 2734,
+    "bundled": 10485,
+    "minified": 7567,
+    "gzipped": 2789,
     "treeshaked": {
       "rollup": {
         "code": 4532,
         "import_statements": 0
       },
       "webpack": {
-        "code": 5590
+        "code": 5735
       }
     }
   }

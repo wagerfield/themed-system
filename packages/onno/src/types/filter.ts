@@ -1,13 +1,34 @@
-import { Key } from "./primitives"
+import { Key, Flag, Props } from "./primitives"
+
+// prettier-ignore
+export type FilterKey<
+  K extends Key,
+  E extends Flag,
+  P extends Props
+> = E extends true ? Exclude<keyof P, K> : Extract<keyof P, K>
+
+// prettier-ignore
+export type FilterValue<
+  K extends Key,
+  E extends Flag,
+  P extends Props
+> = Pick<P, FilterKey<K, E, P>>
+
+// prettier-ignore
+export type FilterProps<
+  K extends Key,
+  E extends Flag
+> = <P extends Props>(props: P) => FilterValue<K, E, P>
+
+// prettier-ignore
+export type FilterKeys<
+  E extends Flag
+> = <K extends Key>(keys: K[]) => FilterProps<K, E>
 
 // Omit
 
-export type OmitKey<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>
-
-export type OmitProps<K extends Key> = <P>(props: P) => OmitKey<P, K>
+export type OmitProps<K extends Key> = FilterProps<K, true>
 
 // Pick
 
-export type PickKey<T, K extends keyof any> = Pick<T, Extract<keyof T, K>>
-
-export type PickProps<K extends Key> = <P>(props: P) => PickKey<P, K>
+export type PickProps<K extends Key> = FilterProps<K, false>
