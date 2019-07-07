@@ -1,5 +1,5 @@
 import { Properties, Pseudos } from "csstype"
-import { Key, Nil, Primitive } from "./primitives"
+import { Key, Nil, Primitive, Props } from "./primitives"
 import { OmitProps, PickProps } from "./filter"
 import { BreakpointKey } from "./breakpoints"
 
@@ -36,7 +36,7 @@ export interface CSSObject extends CSSProperties, CSSPseudos {
 export type CSS = CSSObject[]
 
 export interface CSSRenderer<K extends Key> {
-  <P>(props: P): CSS
+  <P extends Props>(props: P): CSS
   omit: OmitProps<K>
   pick: PickProps<K>
   keys: K[]

@@ -2,11 +2,15 @@ export type Length = number
 
 export type Nil = null | undefined
 
+export type Flag = boolean
+
 export type Key = string
 
 export type Keys = Key[]
 
 export type Index = number
+
+export type Props = object
 
 export type Primitive = number | string
 

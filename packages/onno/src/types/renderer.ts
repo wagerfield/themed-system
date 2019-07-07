@@ -1,4 +1,4 @@
-import { Index, Key, Keys } from "./primitives"
+import { Index, Key, Keys, Props } from "./primitives"
 import { CSSObject } from "./css"
 import { Lookup } from "./lookup"
 
@@ -16,7 +16,7 @@ export interface RendererConfig {
 }
 
 export interface Renderer {
-  <P>(props: P): CSSObject
+  <P extends Props>(props: P): CSSObject
   config: RendererConfig
 }
 
