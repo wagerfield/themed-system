@@ -1,8 +1,9 @@
 import { extend } from "../src/registry"
+import { AnyFunction } from "./test-utils"
 
 test("returns registry config parser", () => {
   const parser = extend(1)
-  expect(parser).toEqual(expect.any(Function))
+  expect(parser).toEqual(AnyFunction)
   expect(parser).toHaveLength(1)
 })
 

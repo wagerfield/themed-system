@@ -1,4 +1,5 @@
 import * as U from "../src/utils"
+import { AnyFunction } from "./test-utils"
 
 test("concat", () => {
   expect(U.concat()).toEqual([])
@@ -15,7 +16,7 @@ test("not", () => {
   expect(equal("a", "b")).toBe(false)
 
   const notEqual = U.not(equal)
-  expect(notEqual).toEqual(expect.any(Function))
+  expect(notEqual).toEqual(AnyFunction)
   expect(notEqual("a", "a")).toBe(false)
   expect(notEqual("a", "b")).toBe(true)
 })
@@ -24,7 +25,7 @@ test("and", () => {
   const isGt10 = (value: number) => value > 10
   const isLt20 = (value: number) => value < 20
   const predicate = U.and(isGt10, isLt20)
-  expect(predicate).toEqual(expect.any(Function))
+  expect(predicate).toEqual(AnyFunction)
   expect(predicate(11)).toBe(true)
   expect(predicate(19)).toBe(true)
   expect(predicate(10)).toBe(false)
@@ -33,7 +34,7 @@ test("and", () => {
 
 test("isType", () => {
   const isBoolean = U.isType<boolean>("boolean")
-  expect(isBoolean).toEqual(expect.any(Function))
+  expect(isBoolean).toEqual(AnyFunction)
   expect(isBoolean).toHaveLength(1)
   expect(isBoolean(true)).toBe(true)
   expect(isBoolean(false)).toBe(true)
