@@ -31,8 +31,7 @@ export const typographyConfig: RegistryConfig<TypographyConfig> = {
   fontSize: {
     props: "fs",
     theme: "fontSizes",
-    transform: addPx,
-    lookup: [12, 14, 16, 20, 24, 32, 40, 48, 56, 64]
+    transform: addPx
   },
   fontSmoothing: {
     props: "fsm",
@@ -41,20 +40,11 @@ export const typographyConfig: RegistryConfig<TypographyConfig> = {
   fontStyle: "fst",
   fontWeight: {
     props: "fw",
-    theme: "fontWeights",
-    lookup: {
-      normal: 400,
-      bold: 700
-    }
+    theme: "fontWeights"
   },
   lineHeight: {
     props: "lh",
-    theme: "lineHeights",
-    lookup: {
-      normal: 1.5,
-      narrow: 1.25,
-      single: 1
-    }
+    theme: "lineHeights"
   },
   letterSpacing: {
     props: "ls",

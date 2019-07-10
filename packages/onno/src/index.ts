@@ -1,4 +1,3 @@
-export * from "./constants"
 export * from "./utils"
 export { omit, pick } from "./filter"
 export { register, unregister, clear, extend } from "./registry"

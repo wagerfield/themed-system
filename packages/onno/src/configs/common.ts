@@ -1,5 +1,4 @@
 import { Key, RegistryConfig, ParseRegistryConfig } from "../types"
-import { PC_SCALE, PX_SCALE } from "../constants"
 import { addPx, addPcOrPx } from "../utils"
 import { extend } from "../registry"
 
@@ -9,24 +8,17 @@ export const border = extend({
 })
 
 export const color = extend({
-  theme: "colors",
-  lookup: {
-    gray: ["#EEE", "#AAA", "#666"],
-    text: "#222",
-    link: "#00F"
-  }
+  theme: "colors"
 })
 
 export const size = extend({
   theme: "sizes",
-  transform: addPcOrPx,
-  lookup: PC_SCALE
+  transform: addPcOrPx
 })
 
 export const space = extend({
   theme: "spaces",
-  transform: addPx,
-  lookup: PX_SCALE
+  transform: addPx
 })
 
 export const edges = <C>(key: Key, alias: Key, parse: ParseRegistryConfig) =>
