@@ -1,17 +1,15 @@
 import { Index, Key, Keys, Props } from "./primitives"
 import { CSSObject } from "./css"
-import { Lookup } from "./lookup"
 
 export type Transform = (value: any) => any
 
 export type RendererKeys = Key | Keys | null
 
 export interface RendererConfig {
-  props?: RendererKeys
-  theme?: RendererKeys
-  style?: RendererKeys
   transform?: Transform
-  lookup?: Lookup
+  props?: RendererKeys
+  style?: RendererKeys
+  theme?: RendererKeys
   index?: Index
 }
 
