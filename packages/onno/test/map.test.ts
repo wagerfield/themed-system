@@ -2,41 +2,54 @@
 
 import { map } from "../src/map"
 
+const props = {
+  width: "width",
+  height: "height",
+  foo: "foo",
+  bar: "bar",
+  w: "w",
+  h: "h",
+  f: "f",
+  b: "b"
+}
+
 test("omit", () => {
   const render = map(["width", "height"])
-  const omit1 = render.omit({ width: "w", size: "s" })
-  const omit2 = render.omit({ h: "h", s: "s" })
+  const omittedProps = render.omit(props)
 
-  omit1.size
-  omit2.s
+  omittedProps.foo
+  omittedProps.bar
+  omittedProps.f
+  omittedProps.b
 
-  // expect(
-  //   render.omit({
-  //     width: "w",
-  //     height: "h",
-  //     size: "s"
-  //   })
-  // ).toEqual({
-  //   size: "s"
-  // })
+  expect(
+    render.omit({
+      width: "width",
+      height: "height",
+      size: "size"
+    })
+  ).toEqual({
+    size: "size"
+  })
 })
 
 test("pick", () => {
   const render = map(["width", "height"])
-  const pick1 = render.pick({ width: "w", size: "s" })
-  const pick2 = render.pick({ h: "h", s: "s" })
+  const pickedProps = render.pick(props)
 
-  pick1.width
-  pick2.h
+  pickedProps.width
+  pickedProps.height
+  pickedProps.w
+  pickedProps.h
 
-  // expect(
-  //   render.pick({
-  //     width: "w",
-  //     height: "h",
-  //     size: "s"
-  //   })
-  // ).toEqual({
-  //   width: "w",
-  //   height: "h"
-  // })
+  expect(
+    render.pick({
+      width: "width",
+      height: "height",
+      size: "size"
+    })
+  ).toEqual({
+    width: "width",
+    height: "height"
+  })
 })

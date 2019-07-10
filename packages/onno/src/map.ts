@@ -1,26 +1,27 @@
 import { CSSKey, CSSRenderer } from "./types"
 import { Configs, ConfigKey } from "./configs"
-import { omitKeys, pickKeys } from "./filter"
+import { omit, pick } from "./filter"
 import { getKeys } from "./registry"
 import { css } from "./css"
 
 export type MapKey = CSSKey | ConfigKey
 
+export type PropsKey<K> = K | Configs[Extract<K, ConfigKey>]
+
+// prettier-ignore
 export function map<
   MK extends MapKey,
-  CK extends Extract<MK, ConfigKey>,
-  AK extends Configs[CK],
-  PK extends MK | AK
+  PK extends PropsKey<MK>
 >(keys: MK[]): CSSRenderer<PK> {
   const mapKeys = getKeys<PK>(keys)
-  const omit = omitKeys<PK>(mapKeys)
-  const pick = pickKeys<PK>(mapKeys)
+  const omitKeys = omit<PK>(mapKeys)
+  const pickKeys = pick<PK>(mapKeys)
 
-  const renderer: CSSRenderer<PK> = (props) => css(pick(props))
+  const renderer: CSSRenderer<PK> = (props) => css(pickKeys(props))
 
   renderer.keys = mapKeys
-  renderer.omit = omit
-  renderer.pick = pick
+  renderer.omit = omitKeys
+  renderer.pick = pickKeys
 
   return renderer
 }
